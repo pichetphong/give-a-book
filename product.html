@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <!-- nav -->
+    <link rel="stylesheet" href="product_navbar.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="product.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jqurey -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="product.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <nav class="header">
+        <a href="product.html">
+            <img style="margin-left: 30px;" src="/image/GiveAbook.png" alt="logo" width="160">
+        </a>
+      <ul class="main-nav">
+          <li><a href="indexv2.html">Home</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="signin.html">Sign in</a></li>
+      </ul>
+      <ul onclick="opencart()" class="cart-nav">
+        <li><i class="fas fa-cart-shopping" style="cursor: pointer;"></i></li>
+        <div id="cartcount" class="cartcount" style="display: none;">
+            0
+        </div>
+      </ul>
+	</nav><br>
+
+    <div class="container">
+        <!-- sidebar -->
+        <div class="sidebar">
+            <input onkeyup="searchbook(this)" id="txt_search" type="text" class="sidebar-search" placeholder="Search..">
+            <div class="menu">
+                <a onclick="searchmenu('ทั้งหมด')" class="sidebar-items ">
+                    ทั้งหมด
+                </a>
+                <a onclick="searchmenu('นิยาย')" class="sidebar-items">
+                    นิยาย
+                </a>
+                <a onclick="searchmenu('การ์ตูน')" class="sidebar-items">
+                    การ์ตูน
+                </a>
+                <a onclick="searchmenu('สารคดี')" class="sidebar-items">
+                    สารคดี
+                </a>
+                <a onclick="searchmenu('พัฒนาตัวเอง')" class="sidebar-items">
+                    พัฒนาตัวเอง
+                </a>
+                <a onclick="searchmenu('สืบสวนสอบสวน')" class="sidebar-items">
+                    สืบสวนสอบสวน
+                </a>
+            </div>
+        </div>
+        <!-- product list -->
+        <div class="product" id="productlist">
+            
+        </div>
+    </div>
+
+    <!-- product info -->
+    <div id="modaldesc" class="modal" style="display: none;">
+        <div onclick="closemodaldesc()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>Detail</h2>
+            <div class="modaldesc-content">
+                <img id="mdd-img" class="modaldesc-img" src="/image/w1.jpg" alt="">
+                <div class="modaldesc-detail">
+                    <p id="mdd-name" style="font-size: 1.5vw;">Product name</p>
+                    <p id="mdd-price" style="font-size: 1.2vw;">500 THB</p><br>
+                    <p id="mdd-desc" style="color: #696969;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto dignissimos praesentium magnam aspernatur sint nihil, officiis tempore repellat doloribus delectus tenetur voluptatibus, corrupti facere repudiandae!</p><br>
+                    <div class="btn-control">
+                        <button onclick="closemodaldesc()" class="btn">
+                            close
+                        </button>
+                        <button onclick="addtocart()" class="btn btn-buy">
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cartlist -->
+    <div id="modalcart" class="modal" style="display: none;">
+        <div onclick="closemodaldesc()" class="modal-bg"></div>
+        <div class="modal-page">
+            <h2>My cart</h2><br>
+            <div id="mycart" class="cartlist">
+                
+
+            </div>
+            <div class="btn-control">
+                <button onclick="closemodaldesc()" class="btn">
+                    close
+                </button>
+                <button class="btn btn-buy">
+                    Buy
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <h3>GiveABook</h3>
+            <p>But and sell your textbooks for the best price</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-line" style="color: #ffffff;"></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 By GiveABook.</p>
+        </div>
+    </footer>
+    
+    <!-- btc -->
+    <!-- <div class="cartlist-rigth">
+        <p onclick="deinitems('-', ${i})" class="btnc">-</p>
+        <p id="countitems${i}" style="margin: 0 10px;">${cart[i].count}</p>
+        <p onclick="deinitems('+', ${i})" class="btnc">+</p>
+    </div> -->
+</body>
+</html>

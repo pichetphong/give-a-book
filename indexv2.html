@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="GiveABook.png">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="indexv2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom js -->
+    <script src="product.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <header class="header">
+        <a href="product.html">
+            <img style="margin-left: 30px;" src="/image/GiveAbook.png" alt="logo" width="160">
+        </a>
+      <ul class="main-nav">
+          <li><a href="indexv2.html">Home</a></li>
+          <li><a href="product.html">Books</a></li>
+          <li><a href="#">My Account</a></li>
+          <li><a href="signin.html">Sign in</a></li>
+      </ul>
+      <ul onclick="opencart()" class="cart-nav">
+        <li><i class="fas fa-cart-shopping" style="cursor: pointer;"></i></li>
+        <div id="cartcount" class="cartcount" style="display: none;">
+            0
+        </div>
+      </ul>
+    </header>
+
+    <!-- Motto -->
+    <div class="motto-header">
+        <h1 class="motto">Buy and sell your textbooks for the best price</h1>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="https://images.unsplash.com/photo-1531501410720-c8d437636169?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+            </div>
+            <div class="mySlides">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFuZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+            </div>
+            <div class="mySlides">
+                <img src="https://images.unsplash.com/photo-1531501410720-c8d437636169?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+            </div>
+            <div class="mySlides">
+                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bWFuZ2F8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+            </div>
+
+            <!-- button prev&next -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+            <br>
+
+            <div style="text-align: center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- product container -->
+    <h1 style="text-align: center; font-size: 60px; margin: 20px;">Best Seller Book</h1>
+    <div class="product-container">
+        <div class="product">
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+            <div class="product_item">
+                <a href="#"><img class="product_img" src="1w.jpg" alt=""></a>
+                <p class="product_name">กำเนิดบาปทาโกปี้</p>
+                <p class="product_price">Price 99฿</p>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <h3>GiveABook</h3>
+            <p>But and sell your textbooks for the best price</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-line" style="color: #ffffff;"></i></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2022 By GiveABook.</p>
+        </div>
+    </footer>
+
+    <!-- script slide -->
+    <script src="indexv2.js"></script>
+</body>
+</html>
